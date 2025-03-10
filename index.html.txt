@@ -1,84 +1,164 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Amazon Affiliate Link Hub - One-Time $25</title>
-        <style>
-            body {
-                font-family: 'Courier New', monospace;
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 20px;
-                background-color: #000;
-                color: #ffffff;
-            }
-            .container {
-                border: 2px solid #00ff00;
-                padding: 20px;
-                text-align: center;
-                background-color: #000;
-            }
-            h1 {
-                font-size: 2em;
-                margin-bottom: 20px;
-            }
-            p {
-                font-size: 1em;
-                margin-bottom: 15px;
-            }
-            .form-group {
-                margin-bottom: 20px;
-                text-align: left;
-            }
-            label {
-                display: block;
-                margin-bottom: 5px;
-                font-weight: bold;
-            }
-            input[type="text"] {
-                width: 100%;
-                padding: 10px;
-                border: 1px solid #00ff00;
-                background-color: #000;
-                color: #ffffff;
-            }
-            .hub-link-button {
-                background-color: #ff4500;
-                color: #ffffff;
-                padding: 12px 24px;
-                border: 3px double #00ff00;
-                border-radius: 8px;
-                font-size: 1.2em;
-                cursor: pointer;
-            }
-            .hub-link-button:hover {
-                background-color: #cc3700;
-            }
-            a {
-                color: #008cba;
-                text-decoration: none;
-                font-weight: bold;
-            }
-            a:hover {
-                text-decoration: underline;
-            }
-            .edit-only { display: block; }
-            .static-only { display: none; }
-            .static-mode { background-color: #111 !important; }
-            .static-mode * { display: none !important; }
-            .static-mode .container { display: block !important; }
-            .static-mode h1 { display: block !important; }
-            .static-mode .static-only { display: block !important; }
-            .static-mode .link-preview { display: block !important; }
-            .static-mode .link-preview a { display: inline !important; }
-            .static-mode .link-preview p { display: block !important; }
-            .static-mode .footer { display: block !important; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Affiliate Link Hub - One-Time $25</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #000;
+            color: #ffffff;
+        }
+        .container {
+            border: 2px solid #00ff00;
+            padding: 20px;
+            text-align: center;
+            background-color: #000;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #00ff00;
+            background-color: #000;
+            color: #ffffff;
+        }
+        .hub-link-button {
+            background-color: #ff4500;
+            color: #ffffff;
+            padding: 12px 24px;
+            border: 3px double #00ff00;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .hub-link-button:hover {
+            background-color: #cc3700;
+        }
+        a {
+            color: #008cba;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .edit-only { display: block; }
+        .static-only { display: none; }
+        .static-mode { background-color: #111 !important; }
+        .static-mode * { display: none !important; }
+        .static-mode .container { display: block !important; }
+        .static-mode h1 { display: block !important; }
+        .static-mode .static-only { display: block !important; }
+        .static-mode .link-preview { display: block !important; }
+        .static-mode .link-preview a { display: inline !important; }
+        .static-mode .link-preview p { display: block !important; }
+        .static-mode .footer { display: block !important; }
     </style>
 </head>
 <body>
-        <div class="container" id="container">
-            <div class="edit-only" style="margin-bottom: 20px;">
-                <input type="button" class="hub-link-button" value="Generate Your Static Hub Link" onclick="generateStaticLink()">
-                <p id="staticLinkText"><em>Fill in your links below, then click above to see your static hub link!</em></p>
-            </div>
+    <div class="container" id="container">
+        <div class="edit-only" style="margin-bottom: 20px;">
+            <input type="button" class="hub-link-button" value="Generate Your Static Hub Link" onclick="generateStaticLink()">
+            <p id="staticLinkText"><em>Fill in your links below, then click above to see your static hub link!</em></p>
+        </div>
+
+        <h1>Amazon Affiliate Link Hub - One-Time $25</h1>
+        <p class="edit-only">Add your Amazon affiliate links below.</p>
+        <p class="static-only">Check out my Amazon Affiliate Hub!</p>
+
+        <div class="form-group edit-only">
+            <label for="link1">Amazon Affiliate Link 1:</label>
+            <input type="text" id="link1" name="link1" placeholder="https://www.amazon.com/dp/YOUR_ASIN/?tag=yourtag-20">
+        </div>
+        <div class="link-preview static-only" id="staticLink1" style="display: none;">
+            <p><a id="link1Static" href="" target="_blank"></a></p>
+        </div>
+
+        <div class="form-group edit-only">
+            <label for="link2">Amazon Affiliate Link 2:</label>
+            <input type="text" id="link2" name="link2" placeholder="https://www.amazon.com/dp/YOUR_ASIN/?tag=yourtag-20">
+        </div>
+        <div class="link-preview static-only" id="staticLink2" style="display: none;">
+            <p><a id="link2Static" href="" target="_blank"></a></p>
+        </div>
+
+        <div class="form-group edit-only">
+            <label for="link3">Amazon Affiliate Link 3:</label>
+            <input type="text" id="link3" name="link3" placeholder="https://www.amazon.com/dp/YOUR_ASIN/?tag=yourtag-20">
+        </div>
+        <div class="link-preview static-only" id="staticLink3" style="display: none;">
+            <p><a id="link3Static" href="" target="_blank"></a></p>
+        </div>
+
+        <p class="footer">Built with love using Grok by xAI.</p>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const isStaticMode = urlParams.get('static') === 'true';
+        if (isStaticMode) {
+            document.body.classList.add('static-mode');
+            loadStaticHub();
+            alert('Static mode is active - no editing allowed!');
+            setTimeout(() => {
+                document.querySelectorAll('.edit-only, input, button, label').forEach(el => {
+                    el.style.display = 'none';
+                    el.style.visibility = 'hidden';
+                });
+            }, 100);
+        }
+
+        function generateStaticLink() {
+            let hasLinks = false;
+            for (let i = 1; i <= 3; i++) {
+                const link = document.getElementById(`link${i}`).value.trim();
+                if (link) {
+                    hasLinks = true;
+                    localStorage.setItem(`link${i}`, link);
+                }
+            }
+            if (!hasLinks) {
+                alert('Please add at least one link!');
+                return;
+            }
+
+            const staticUrl = window.location.origin + window.location.pathname + '?static=true';
+            document.getElementById('staticLinkText').innerHTML = `Your static hub link: <a href="${staticUrl}" target="_blank">${staticUrl}</a><br><em>Copy this link and share it!</em>`;
+            window.open(staticUrl, '_blank');
+        }
+
+        function loadStaticHub() {
+            for (let i = 1; i <= 3; i++) {
+                const link = localStorage.getItem(`link${i}`);
+                if (link) {
+                    const linkEl = document.getElementById(`link${i}Static`);
+                    linkEl.href = link;
+                    linkEl.textContent = link;
+                    document.getElementById(`staticLink${i}`).style.display = 'block';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
