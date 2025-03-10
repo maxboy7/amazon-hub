@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Amazon Affiliate Link Hub - One-Time $25</title>
+        <style>
+            body {
+                font-family: 'Courier New', monospace;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #000;
+                color: #ffffff;
+            }
+            .container {
+                border: 2px solid #00ff00;
+                padding: 20px;
+                text-align: center;
+                background-color: #000;
+            }
+            h1 {
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 1em;
+                margin-bottom: 15px;
+            }
+            .form-group {
+                margin-bottom: 20px;
+                text-align: left;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+            input[type="text"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #00ff00;
+                background-color: #000;
+                color: #ffffff;
+            }
+            .hub-link-button {
+                background-color: #ff4500;
+                color: #ffffff;
+                padding: 12px 24px;
+                border: 3px double #00ff00;
+                border-radius: 8px;
+                font-size: 1.2em;
+                cursor: pointer;
+            }
+            .hub-link-button:hover {
+                background-color: #cc3700;
+            }
+            a {
+                color: #008cba;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            .edit-only { display: block; }
+            .static-only { display: none; }
+            .static-mode { background-color: #111 !important; }
+            .static-mode * { display: none !important; }
+            .static-mode .container { display: block !important; }
+            .static-mode h1 { display: block !important; }
+            .static-mode .static-only { display: block !important; }
+            .static-mode .link-preview { display: block !important; }
+            .static-mode .link-preview a { display: inline !important; }
+            .static-mode .link-preview p { display: block !important; }
+            .static-mode .footer { display: block !important; }
+    </style>
+</head>
+<body>
+        <div class="container" id="container">
+            <div class="edit-only" style="margin-bottom: 20px;">
+                <input type="button" class="hub-link-button" value="Generate Your Static Hub Link" onclick="generateStaticLink()">
+                <p id="staticLinkText"><em>Fill in your links below, then click above to see your static hub link!</em></p>
+            </div>
